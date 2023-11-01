@@ -1,0 +1,30 @@
+[14-Aug-2023 10:10:59 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/update.php on line 26
+[14-Aug-2023 10:12:43 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/update.php on line 26
+[21-Aug-2023 04:17:41 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/insert.php on line 26
+[29-Aug-2023 04:54:46 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/update.php on line 30
+[29-Aug-2023 04:55:55 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/insert.php on line 26
+[31-Aug-2023 04:02:10 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/update.php on line 30
+[01-Sep-2023 08:07:48 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/update.php on line 30
+[01-Sep-2023 08:13:13 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/update.php on line 30
+[01-Sep-2023 08:15:38 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/update.php on line 30
+[02-Sep-2023 09:11:59 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/insert.php on line 26
+[03-Sep-2023 06:12:48 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/update.php on line 30
+[11-Sep-2023 03:41:17 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/zawyaonl/public_html/aqartech/config/dbconnect.php on line 2
+[11-Sep-2023 03:41:17 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home3/zawyaonl/public_html/aqartech/config/dbconnect.php on line 3
+[11-Sep-2023 03:41:17 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home3/zawyaonl/public_html/aqartech/config/dbconnect.php on line 4
+[11-Sep-2023 03:41:17 America/Boise] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home3/zawyaonl/public_html/aqartech/api/properties/list.php on line 82
+[11-Sep-2023 03:41:17 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/zawyaonl/public_html/aqartech/api/properties/list.php on line 83
+[28-Sep-2023 19:14:12 America/Boise] PHP Warning:  mysqli_query(): Empty query in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 29
+[28-Sep-2023 19:14:12 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 30
+[28-Sep-2023 19:14:12 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 32
+[28-Sep-2023 19:14:45 America/Boise] PHP Warning:  mysqli_query(): Empty query in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 29
+[28-Sep-2023 19:14:45 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 30
+[28-Sep-2023 19:14:59 America/Boise] PHP Warning:  mysqli_query(): Empty query in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 29
+[28-Sep-2023 19:14:59 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 30
+[28-Sep-2023 19:15:03 America/Boise] PHP Warning:  mysqli_query(): Empty query in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 29
+[28-Sep-2023 19:15:03 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 30
+[28-Sep-2023 19:15:14 America/Boise] PHP Warning:  mysqli_query(): Empty query in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 29
+[28-Sep-2023 19:15:14 America/Boise] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home3/zawyaonl/public_html/aqartech/api/properties/filter.php on line 30
+[09-Oct-2023 09:31:34 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/insert.php on line 26
+[09-Oct-2023 09:38:12 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/insert.php on line 26
+[21-Oct-2023 12:13:32 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/zawyaonl/public_html/aqartech/api/properties/insert.php on line 34

@@ -1,0 +1,8 @@
+[21-Oct-2023 06:16:28 America/Boise] PHP Warning:  include_once(./../config/dbconnect.php): failed to open stream: No such file or directory in /home3/zawyaonl/public_html/aqartech/api/notification/send.php on line 5
+[21-Oct-2023 06:16:28 America/Boise] PHP Warning:  include_once(): Failed opening './../config/dbconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/zawyaonl/public_html/aqartech/api/notification/send.php on line 5
+[21-Oct-2023 06:16:28 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home3/zawyaonl/public_html/aqartech/api/notification/send.php on line 9
+[21-Oct-2023 06:16:28 America/Boise] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home3/zawyaonl/public_html/aqartech/api/notification/send.php on line 10
+[21-Oct-2023 06:19:00 America/Boise] PHP Warning:  include_once(./../config/dbconnect.php): failed to open stream: No such file or directory in /home3/zawyaonl/public_html/aqartech/api/notification/send.php on line 5
+[21-Oct-2023 06:19:00 America/Boise] PHP Warning:  include_once(): Failed opening './../config/dbconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/zawyaonl/public_html/aqartech/api/notification/send.php on line 5
+[21-Oct-2023 06:19:00 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home3/zawyaonl/public_html/aqartech/api/notification/send.php on line 9
+[21-Oct-2023 06:19:00 America/Boise] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home3/zawyaonl/public_html/aqartech/api/notification/send.php on line 10

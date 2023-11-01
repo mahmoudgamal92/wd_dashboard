@@ -1,0 +1,4 @@
+[26-Jul-2023 15:52:02 America/Boise] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/zawyaonl/public_html/aqartech/api/profile/update.php on line 19
+[26-Jul-2023 15:52:02 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/zawyaonl/public_html/aqartech/api/profile/update.php on line 20
+[26-Jul-2023 15:55:14 America/Boise] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/zawyaonl/public_html/aqartech/api/profile/update.php on line 19
+[26-Jul-2023 15:55:14 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/zawyaonl/public_html/aqartech/api/profile/update.php on line 20
