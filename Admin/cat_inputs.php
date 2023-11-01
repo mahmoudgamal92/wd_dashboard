@@ -6,7 +6,11 @@ $result = mysqli_query($con, $cmd);
 $cat = mysqli_fetch_array($result);
 
 // Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id 
-
+// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id 
+// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id 
+// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id 
+// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id
+ 
 $cmd1 = "select * from cat_inputs where cat_id = '$cat_id'";
 $result1 = mysqli_query($con, $cmd1);
 
