@@ -11,12 +11,12 @@ include './../dbcontext/connect.php';
 	<meta name="author" content="DexignZone" />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:title" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta name="description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:title" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
 	<meta property="og:image" content="social-image.png" />
 	<meta name="format-detection" content="telephone=no">
-	<title>Omah - Property Bootstrap Admin Dashboard</title>
+	<title>لوحة التحكم عقارنك</title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	<link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
@@ -92,13 +92,7 @@ include './../dbcontext/connect.php';
 								<table class="table table-responsive-md">
 									<thead>
 										<tr>
-											<th class="width50">
-												<div class="form-check custom-checkbox checkbox-success check-lg me-3">
-													<input type="checkbox" class="form-check-input" id="checkAll"
-														required="">
-													<label class="custom-control-label" for="checkAll"></label>
-												</div>
-											</th>
+											
 											<th><strong>INPUT NO.</strong></th>
 											<th><strong>TITLE</strong></th>
 											<th><strong>PLACEHOLDER</strong></th>
@@ -117,13 +111,7 @@ include './../dbcontext/connect.php';
 
 											?>
 											<tr>
-												<td>
-													<div class="form-check custom-checkbox checkbox-success check-lg me-3">
-														<input type="checkbox" class="form-check-input" id="customCheckBox2"
-															required="">
-														<label class="custom-control-label" for="customCheckBox2"></label>
-													</div>
-												</td>
+												
 												<td><strong>
 														<?php echo $row['input_id']; ?>
 													</strong></td>

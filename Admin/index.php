@@ -1,3 +1,19 @@
+<?php
+include './../dbcontext/connect.php';
+?>
+
+<?php
+$sale_cmd = "select * from properties where adv_type = 'for_sale'";
+$rent_cmd = "select * from properties where adv_type = 'for_rent'";
+$result_sale = mysqli_query($con, $sale_cmd);
+$result_rent = mysqli_query($con, $rent_cmd);
+
+$count_sale = mysqli_num_rows($result_sale);
+$count_rent = mysqli_num_rows($result_rent);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +29,7 @@
 	<meta property="og:description" content="Aqargate :  Property Admin Dashboard  Bootstrap 5 Template" />
 	<meta property="og:image" content="social-image.png" />
 	<meta name="format-detection" content="telephone=no">
-	<title>Aqargate - Property Bootstrap Admin Dashboard</title>
+	<title>لوحة التحكم عقارنك</title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	<link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
@@ -104,11 +120,13 @@
 									<div class="card-body">
 										<div class="media align-items-center">
 											<div class="media-body me-3">
-												<h2 class="fs-36 text-black font-w600">2,356</h2>
+												<h2 class="fs-36 text-black font-w600">
+													<?php echo $count_sale ?>
+												</h2>
 												<p class="fs-18 mb-0 text-black font-w500">
 													إجمالي عدد العقارات للبيع
 												</p>
-												<span class="fs-13">Target 3k/month</span>
+												<span class="fs-13">Target 1k/month</span>
 											</div>
 											<div class="d-inline-block position-relative donut-chart-sale">
 												<span class="donut1"
@@ -125,11 +143,13 @@
 									<div class="card-body">
 										<div class="media align-items-center">
 											<div class="media-body me-3">
-												<h2 class="fs-36 text-black font-w600">2,206</h2>
+												<h2 class="fs-36 text-black font-w600">
+													<?php  echo $count_rent ;?>
+												</h2>
 												<p class="fs-18 mb-0 text-black font-w500">
 													إجمالي عدد العقارات للإيجار
 												</p>
-												<span class="fs-13">Target 3k/month</span>
+												<span class="fs-13">Target 1k/month</span>
 											</div>
 											<div class="d-inline-block position-relative donut-chart-sale">
 												<span class="donut1"
@@ -233,7 +253,7 @@
 												</svg>
 											</span>
 											<div class="media-body">
-												<p class="mb-1">Patient</p>
+												<p class="mb-1">إجمالي العقارات</p>
 												<h4 class="mb-0">364.50K</h4>
 												<span class="badge badge-success">-3.5%</span>
 											</div>
@@ -248,7 +268,9 @@
 					<div class="col-xl-6 col-xxl-12">
 						<div class="card">
 							<div class="card-header border-0 pb-0">
-								<h3 class="fs-20 text-black">إجمالي الربح</h3>
+								<h3 class="fs-20 text-black">
+								إجمالي الإشتراكات
+								</h3>
 								<div class="dropdown ms-auto">
 									<div class="btn-link" data-bs-toggle="dropdown">
 										<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -260,16 +282,17 @@
 											</g>
 										</svg>
 									</div>
-									<div class="dropdown-menu dropdown-menu-end">
-										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
-										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
-									</div>
+									
 								</div>
 							</div>
 							<div class="card-body pt-2 pb-0">
 								<div class="d-flex flex-wrap align-items-center">
-									<span class="fs-36 text-black font-w600 me-3">$678,345</span>
-									<p class="me-sm-auto me-3 mb-sm-0 mb-3">last month $563,443</p>
+									<span class="fs-36 text-black font-w600 me-3">
+										الشهر الماضي : 78478 ريال
+									</span>
+									<p class="me-sm-auto me-3 mb-sm-0 mb-3">
+										 $563,443
+										</p>
 									<div class="d-flex align-items-center">
 										<svg class="me-3" width="87" height="47" viewBox="0 0 87 47" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
@@ -298,12 +321,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-9 col-xxl-8">
+
+
+					<div class="col-xl-12 col-xxl-12">
 						<div class="row">
 							<div class="col-xl-8 col-xxl-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h3 class="fs-20 text-black">Overview</h3>
+										<h3 class="fs-20 text-black">
+											نظرة عامة علي المستخدمين 
+										</h3>
 										<div class="dropdown ms-auto">
 											<div class="btn-link" data-bs-toggle="dropdown">
 												<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -339,8 +366,10 @@
 													</svg>
 												</span>
 												<div>
-													<p class="fs-14 mb-1">Total Sale</p>
-													<span class="fs-18 text-black font-w700">2,346 Unit</span>
+													<p class="fs-14 mb-1">
+														العقاريين 
+													</p>
+													<span class="fs-18 text-black font-w700">2,346 </span>
 												</div>
 											</div>
 											<div class="d-flex mb-4 align-items-center">
@@ -359,8 +388,10 @@
 													</svg>
 												</span>
 												<div>
-													<p class="fs-14 mb-1">Total Rent</p>
-													<span class="fs-18 text-black font-w700">1,252 Unit</span>
+													<p class="fs-14 mb-1">
+														المستخدمين 
+													</p>
+													<span class="fs-18 text-black font-w700">1,252</span>
 												</div>
 											</div>
 										</div>
@@ -368,9 +399,12 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-4 col-xxl-12">
+
+							<div class="row">
+
+							<div class="col-xl-4">
 								<div class="row">
-									<div class="col-xl-12 col-xxl-6 col-md-6">
+									<div class="col-xl-12 col-xxl-12 col-md-12">
 										<div class="card">
 											<div class="card-body">
 												<div id="monocromeChart"></div>
@@ -389,34 +423,11 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xl-12 col-xxl-6 col-md-6">
-										<div class="card">
-											<div class="card-body">
-												<p class="mb-2 d-flex  fs-16 text-black font-w500">Product Viewed
-													<span class="pull-right ms-auto text-dark fs-14">561/days</span>
-												</p>
-												<div class="progress mb-4" style="height:10px">
-													<div class="progress-bar bg-primary progress-animated"
-														style="width:75%; height:10px;" role="progressbar">
-														<span class="sr-only">75% Complete</span>
-													</div>
-												</div>
-												<p class="mb-2 d-flex  fs-16 text-black font-w500">Product Listed
-													<span class="pull-right ms-auto text-dark fs-14">3,456 Unit</span>
-												</p>
-												<div class="progress mb-3" style="height:10px">
-													<div class="progress-bar bg-primary progress-animated"
-														style="width:90%; height:10px;" role="progressbar">
-														<span class="sr-only">90% Complete</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+									
 								</div>
 							</div>
 
-							<div class="col-xl-12">
+							<div class="col-xl-8">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
 										<h3 class="fs-20 text-black">Properties Map Location</h3>
@@ -508,108 +519,10 @@
 									</div>
 								</div>
 							</div>
+</div>
 						</div>
 					</div>
-					<div class="col-xl-3 col-xxl-4">
-						<div class="row">
-							<div class="col-xl-12 col-lg-6">
-								<div class="card">
-									<div class="card-header border-0 pb-0">
-										<h3 class="fs-20 text-black">Customer Review</h3>
-										<div class="dropdown ms-auto">
-											<div class="btn-link" data-bs-toggle="dropdown">
-												<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24"></rect>
-														<circle fill="#000000" cx="5" cy="12" r="2"></circle>
-														<circle fill="#000000" cx="12" cy="12" r="2"></circle>
-														<circle fill="#000000" cx="19" cy="12" r="2"></circle>
-													</g>
-												</svg>
-											</div>
-											<div class="dropdown-menu dropdown-menu-end">
-												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
-												<a class="dropdown-item" href="javascript:void(0);">Delete</a>
-											</div>
-										</div>
-									</div>
-									<div class="card-body pb-0">
-										<div class="pb-3 border-bottom mb-3">
-											<div class="d-flex mb-3 flex-wrap align-items-end">
-												<img class="rounded me-3" src="images/customers/1.jpg" width="58"
-													alt="">
-												<div>
-													<h6 class="fs-16 text-black font-w600">John Doe</h6>
-													<div class="star-icons">
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-													</div>
-												</div>
-												<span class="fs-14 ms-auto">5m ago</span>
-											</div>
-											<p class="fs-14 mb-0">Friendly service
-												Josh, Lunar and everyone at Just Property in Hastings deserved a big
-												Thank You from us for moving us from Jakarta to Medan during the
-												lockdown.
-											</p>
-										</div>
-										<div class="pb-3 border-bottom mb-3">
-											<div class="d-flex mb-3 flex-wrap align-items-end">
-												<img class="rounded me-3" src="images/customers/2.jpg" width="58"
-													alt="">
-												<div>
-													<h6 class="fs-16 text-black font-w600">Amelia Tuner</h6>
-													<div class="star-icons">
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-													</div>
-												</div>
-												<span class="fs-14 ms-auto">10h ago</span>
-											</div>
-											<p class="fs-14 mb-0">I viewed a number of properties with Just Property and
-												found them to be professional, efficient, patient, courteous and helpful
-												every time.
-											</p>
-										</div>
-										<div class="pb-3">
-											<div class="d-flex mb-3 flex-wrap align-items-end">
-												<img class="rounded me-3" src="images/customers/3.jpg" width="58"
-													alt="">
-												<div>
-													<h6 class="fs-16 text-black font-w600">Jessica Humb</h6>
-													<div class="star-icons">
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-														<i class="las la-star"></i>
-													</div>
-												</div>
-												<span class="fs-14 ms-auto">2d ago</span>
-											</div>
-											<p class="fs-14 mb-0">Dealing with Syamsudin and Bakri was a joy. I got in
-												touch with Just Property after seeing a couple of properties that caught
-												my eye. Both Syamsudin and Bakri strive to deliver a professional
-												service and surpassed my expectations - they were not only helpful but
-												extremely approachable and not at all bumptious...
-											</p>
-										</div>
-									</div>
-									<div class="card-footer border-0 p-0">
-										<a href="review.html" class="btn d-block btn-primary rounded">See More
-											Reviews</a>
-									</div>
-								</div>
-							</div>
 
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

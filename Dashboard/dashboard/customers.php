@@ -8,12 +8,12 @@
 	<meta name="author" content="DexignZone" />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:title" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta name="description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:title" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
 	<meta property="og:image" content="social-image.png" />
 	<meta name="format-detection" content="telephone=no">
-	<title>Omah - Property Bootstrap Admin Dashboard</title>
+	<title>لوحة التحكم عقارنك</title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	<link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
