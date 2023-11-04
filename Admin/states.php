@@ -63,21 +63,65 @@ include './../dbcontext/connect.php';
 		<div class="content-body">
 			<!-- row -->
 			<div class="container">
+
+
+
 				<div class="form-head page-titles d-flex  align-items-center">
 					<div class="me-auto  d-lg-block">
 						<h2 class="text-black font-w600">
                         المناطق الرئيسية للملكة
 						</h2>
 					</div>
-					<a href="add_input.php" class="btn btn-primary rounded light me-3">
-					جديد
- 					</a>
+					<button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+						جديد
+					</button>
+
 						
 					<a href="javascript:void(0);" class="btn btn-primary rounded"><i class="fas fa-cog me-0"></i></a>
 				</div>
 
 
+                                    <div class="modal fade" id="exampleModalCenter">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">
+														إضافة منطقة جديدة
+													</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+												<div class="basic-form">
+                                    <form action="api/input/insert.php" method="POST">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <input type="text" 
+                                                    class="form-control input-default"
+                                                    name="input_label"
+                                                        placeholder="أدخل أسم المدخل">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control input-rounded"
+                                                    name="input_desc"
+                                                        placeholder="أدخل وصف المدخل">
+                                                </div>
+                                            </div>
 
+                                        </div>
+</form>
+</div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
 				<div class="col-lg-12">
