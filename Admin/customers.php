@@ -14,12 +14,12 @@ include './../dbcontext/connect.php';
 	<meta name="author" content="DexignZone" />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:title" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta name="description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:title" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
 	<meta property="og:image" content="social-image.png" />
 	<meta name="format-detection" content="telephone=no">
-	<title>Omah - Property Bootstrap Admin Dashboard</title>
+	<title>لوحة التحكم عقارنك</title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	<link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
@@ -57,9 +57,7 @@ include './../dbcontext/connect.php';
 		***********************************-->
 		<div class="nav-header">
 			<a href="index.php" class="brand-logo">
-				<img class="logo-abbr" src="images/logo.png" alt="">
-				<img class="logo-compact" src="images/logo-text.png" alt="">
-				<img class="brand-title" src="images/logo-text.png" alt="">
+				<img class="logo-abbr" src="images/logo_white.png" alt="">
 			</a>
 
 			<div class="nav-control">
@@ -139,6 +137,7 @@ include './../dbcontext/connect.php';
 											<?php echo $UserInfo['user_name'];?>
 											</h3>
 											<span class="d-block mb-lg-0 mb-0">
+											<?php echo "User_Type"?>
 											</span>
 										</div>
 
@@ -158,6 +157,9 @@ include './../dbcontext/connect.php';
 										<?php echo $UserInfo['user_phone'];?>
 										</span>
 									</div>
+
+
+								
 
 									<div class="col-xl-2 col-xxl-2 col-lg-3 col-sm-4 mb-sm-4">
 										<div class="dropdown ms-4  mt-auto mb-auto">

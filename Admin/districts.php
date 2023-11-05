@@ -1,6 +1,11 @@
 <?php
 include './../dbcontext/connect.php';
 ?>
+
+<?php
+$cmd = "select * from cities";
+$cities_res = mysqli_query($con,$cmd);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +16,12 @@ include './../dbcontext/connect.php';
 	<meta name="author" content="DexignZone" />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:title" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta name="description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:title" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
 	<meta property="og:image" content="social-image.png" />
 	<meta name="format-detection" content="telephone=no">
-	<title>Omah - Property Bootstrap Admin Dashboard</title>
+	<title>لوحة التحكم عقارنك</title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	<link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
@@ -51,7 +56,6 @@ include './../dbcontext/connect.php';
 		<?php include 'components/chatbox.php'; ?>
 		<!--************* Chat box End *************-->
 
-
 		<!--*************** Header start ************-->
 		<?php include 'components/header.php'; ?>
 		<!--************ Header end ********-->
@@ -62,21 +66,102 @@ include './../dbcontext/connect.php';
 
 		<div class="content-body">
 			<!-- row -->
-			<div class="container">
-				<div class="form-head page-titles d-flex  align-items-center">
-					<div class="me-auto  d-lg-block">
-						<h2 class="text-black font-w600">
-                        المدن الرئيسية
-						</h2>
+			<div class="container-fluid">
+				<div class="form-head page-titles">
+					<div class="row">
+
+						<div class="col-md-8">
+							<div class="me-auto  d-lg-block">
+								<h2 class="text-black font-w600">
+									المدن الرئيسية
+								</h2>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="row">
+
+								<div class="col-md-6">
+									<a class="btn btn-primary rounded" data-bs-toggle="modal"
+										data-bs-target="#exampleModalCenter">جديد</a>
+								</div>
+
+								<div class="col-md-6">
+									<a href="javascript:void(0);" class="btn btn-primary rounded">
+										<i class="fas fa-cog me-0"></i>
+									</a>
+								</div>
+
+							</div>
+						</div>
 					</div>
-					<a href="add_input.php" class="btn btn-primary rounded light me-3">
-					جديد
- 					</a>
-						
-					<a href="javascript:void(0);" class="btn btn-primary rounded"><i class="fas fa-cog me-0"></i></a>
 				</div>
 
 
+				<div class="modal fade" id="exampleModalCenter">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+
+							<div class="modal-header">
+								<h5 class="modal-title">
+									إضافة حي جديد
+								</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal">
+								</button>
+							</div>
+
+							<div class="modal-body">
+								<div class="basic-form">
+									<form method="POST" action="api/address/district.php">
+										<input type="hidden" name="action" value="create">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="mb-3">
+													<select dir="rtl" name="city_id"
+														class="default-select form-control wide mb-3">
+														<?php  
+														while($state = mysqli_fetch_array($cities_res))
+														{
+															?>
+															<option value="<?=$state['city_id']?>">
+																<?=$state['name']?>
+															</option>
+															<?php
+														}
+														?>
+													</select>
+
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<div class="mb-3">
+													<input type="text" class="form-control input-default" name="name"
+														placeholder="أدخل أسم الحي" required>
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<div class="mb-3">
+													<input type="text" class="form-control input-rounded" name="coords"
+														placeholder=" أدخل الإحداثيات" required>
+												</div>
+											</div>
+
+										</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger light"
+									data-bs-dismiss="modal">إغلاق</button>
+								<button type="submit" class="btn btn-primary">حفظ</button>
+							</div>
+
+							</form>
+
+						</div>
+					</div>
+				</div>
 
 
 
@@ -84,7 +169,7 @@ include './../dbcontext/connect.php';
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title">
-						المدن الرئيسية
+								الأحياء
 							</h4>
 						</div>
 						<div class="card-body">
@@ -92,13 +177,13 @@ include './../dbcontext/connect.php';
 								<table class="table table-responsive-md">
 									<thead>
 										<tr>
-											<th><strong>District NO.</strong></th>
-                                            <th><strong>DISTRICT NAME</strong></th>
-											<th><strong>City ID</strong></th>
-											<th><strong>Date Created</strong></th>
-                                            <th><strong>Status</strong></th>
-											<th><strong>Edit</strong></th>
-
+											<th><strong>DISTRICT NO.</strong></th>
+											<th><strong>DISTRICT NAME</strong></th>
+											<th><strong>CITY</strong></th>
+											<th><strong>DATE CREATED</strong></th>
+											<th><strong>STATUS</strong></th>
+											<th><strong>EDIT</strong></th>
+											<th><strong>DELETE</strong></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -109,46 +194,45 @@ include './../dbcontext/connect.php';
 										while ($row = $res->fetch_assoc()) {
 
 											?>
-											<tr>
-												
-												<td>
-													<strong>
-														<?php echo $row['id']; ?>
-													</strong>
-												</td>
-												
-												<td>
-													<?php echo $row['name']; ?>
-												</td>
+										<tr>
 
-												<td>
+											<td>
+												<strong>
+													<?php echo $row['id']; ?>
+												</strong>
+											</td>
+
+											<td>
+												<?php echo $row['name']; ?>
+											</td>
+											<td>
 												<?php echo $row['city_id']; ?>
-												</td>
+											</td>
 
-                                                <td>
+											<td>
 												<?php echo $row['date_created']; ?>
-												</td>
-
-												<td>
-													<div class="d-flex align-items-center">
-														<i class="fas fa-circle text-success me-1"></i> 
-														Active
-													</div>
-												</td>
-												<td>
-													<div class="d-flex">
-														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1">
-															<i class="fas fa-pencil-alt"></i>
-														</a>
-
-													
-													</div>
-												</td>
-
-												
-											</tr>
-
-											<?php
+											</td>
+											<td>
+												<div class="d-flex align-items-center"><i
+														class="fas fa-circle text-success me-1"></i> Active</div>
+											</td>
+											<td>
+												<div class="d-flex">
+													<a href="#" class="btn btn-primary shadow btn-xs sharp me-1">
+														<i class="fas fa-pencil-alt"></i>
+													</a>
+												</div>
+											</td>
+											<td>
+												<div class="d-flex">
+												<a href="api/address/district.php?action=delete&id=<?= $row['id'] ?>" 
+													class="btn btn-danger shadow btn-xs sharp me-1">
+														<i class="fas fa-trash"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<?php
 										}
 										?>
 									</tbody>

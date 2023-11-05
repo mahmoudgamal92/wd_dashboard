@@ -24,9 +24,9 @@ include './../dbcontext/connect.php';
 	<meta name="author" content="DexignZone" />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:title" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta name="description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:title" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
 	<meta property="og:image" content="social-image.png"/>
 	<meta name="format-detection" content="telephone=no">
     <title><?php echo $prop['adv_title']; ?></title>
@@ -322,5 +322,5 @@ include './../dbcontext/connect.php';
 	
 </body>
 
-<!-- Mirrored from omah.dexignzone.com/xhtml/property-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 May 2023 14:04:48 GMT -->
+<!-- Mirrored from Aqartech.dexignzone.com/xhtml/property-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 May 2023 14:04:48 GMT -->
 </html>

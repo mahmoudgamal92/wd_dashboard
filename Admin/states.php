@@ -11,12 +11,12 @@ include './../dbcontext/connect.php';
 	<meta name="author" content="DexignZone" />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:title" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
-	<meta property="og:description" content="Omah :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta name="description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:title" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
+	<meta property="og:description" content="Aqartech :  Property Admin Dashboard  Bootstrap 5 Template" />
 	<meta property="og:image" content="social-image.png" />
 	<meta name="format-detection" content="telephone=no">
-	<title>Omah - Property Bootstrap Admin Dashboard</title>
+	<title>لوحة التحكم عقارنك</title>
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	<link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
@@ -43,41 +43,103 @@ include './../dbcontext/connect.php';
 	<!--********* Main wrapper start ***********-->
 	<div id="main-wrapper">
 
-		<!--************* Nav header start ***************-->
+		<!--************* Nav header start ************-->
 		<?php include 'components/nav_header.php'; ?>
 		<!--*************  Nav header end *************-->
 
-		<!--************* Chat box start ***************-->
+		<!--************* Chat box start **************-->
 		<?php include 'components/chatbox.php'; ?>
-		<!--************* Chat box End *************-->
+		<!--************* Chat box End ****************-->
 
-
-		<!--*************** Header start ************-->
+		<!--*************** Header start **************-->
 		<?php include 'components/header.php'; ?>
 		<!--************ Header end ********-->
 
-		<!--***************** Sidebar start *********-->
+		<!--***************** Sidebar start ***********-->
 		<?php include 'components/sidebar.php'; ?>
-		<!--********** Sidebar end *********-->
+		<!--****************** Sidebar end ************-->
 
 		<div class="content-body">
 			<!-- row -->
 			<div class="container">
-				<div class="form-head page-titles d-flex  align-items-center">
-					<div class="me-auto  d-lg-block">
-						<h2 class="text-black font-w600">
-                        المناطق الرئيسية للملكة
-						</h2>
+				<div class="form-head page-titles">
+				<div class="row">
+
+					<div class="col-md-8">
+						<div class="me-auto  d-lg-block">
+								<h2 class="text-black font-w600">
+								المناطق الرئيسية للملكة
+								</h2>
+						</div>
 					</div>
-					<a href="add_input.php" class="btn btn-primary rounded light me-3">
-					جديد
- 					</a>
-						
-					<a href="javascript:void(0);" class="btn btn-primary rounded"><i class="fas fa-cog me-0"></i></a>
+
+					<div class="col-md-4">
+						<div class="row">
+
+							<div class="col-md-6">
+								<a class="btn btn-primary rounded" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">جديد</a>
+							</div>
+
+							<div class="col-md-6">
+							 <a href="javascript:void(0);" class="btn btn-primary rounded">
+								<i class="fas fa-cog me-0"></i>
+							 </a>
+							</div>
+
+						</div>
+					</div>
+				  </div>
 				</div>
 
 
+                                    <div class="modal fade" id="exampleModalCenter">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">
+														إضافة منطقة جديدة
+													</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+												<div class="basic-form">
+                                   
+									  <form method="POST" action="api/address/city.php">
+									  <input type="hidden" name="action" value="create">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <input type="text" 
+                                                    class="form-control input-default"
+                                                        name="name"
+                                                        placeholder="أدخل أسم المنطقة"
+														required>
+                                                </div>
+                                            </div>
 
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control input-rounded"
+                                                    name="coords"
+                                                    placeholder=" أدخل الإحداثيات"
+													required>
+                                                </div>
+                                            </div>
+
+                                        </div>
+										</div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
+                                                    <button type="submit" class="btn btn-primary">حفظ</button>
+                                                </div>
+
+												</form>
+
+                                            </div>
+                                        </div>
+                                    </div>
 
 
 				<div class="col-lg-12">
@@ -98,6 +160,7 @@ include './../dbcontext/connect.php';
 											<th><strong>DATE CREATED</strong></th>
 											<th><strong>STATUS</strong></th>
                                             <th><strong>EDIT</strong></th>
+											<th><strong>DELETE</strong></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -140,7 +203,14 @@ include './../dbcontext/connect.php';
 													</div>
 												</td>
 
-												
+												<td>
+													<div class="d-flex">
+														<a href="api/address/state.php?action=delete&id=<?= $row['state_id'] ?>" 
+														class="btn btn-danger shadow btn-xs sharp me-1">
+															<i class="fas fa-trash"></i>
+														</a>
+													</div>
+												</td>
 											</tr>
 
 											<?php
