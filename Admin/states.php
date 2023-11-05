@@ -43,41 +43,52 @@ include './../dbcontext/connect.php';
 	<!--********* Main wrapper start ***********-->
 	<div id="main-wrapper">
 
-		<!--************* Nav header start ***************-->
+		<!--************* Nav header start ************-->
 		<?php include 'components/nav_header.php'; ?>
 		<!--*************  Nav header end *************-->
 
-		<!--************* Chat box start ***************-->
+		<!--************* Chat box start **************-->
 		<?php include 'components/chatbox.php'; ?>
-		<!--************* Chat box End *************-->
+		<!--************* Chat box End ****************-->
 
-
-		<!--*************** Header start ************-->
+		<!--*************** Header start **************-->
 		<?php include 'components/header.php'; ?>
 		<!--************ Header end ********-->
 
-		<!--***************** Sidebar start *********-->
+		<!--***************** Sidebar start ***********-->
 		<?php include 'components/sidebar.php'; ?>
-		<!--********** Sidebar end *********-->
+		<!--****************** Sidebar end ************-->
 
 		<div class="content-body">
 			<!-- row -->
 			<div class="container">
+				<div class="form-head page-titles">
+				<div class="row">
 
-
-
-				<div class="form-head page-titles d-flex  align-items-center">
-					<div class="me-auto  d-lg-block">
-						<h2 class="text-black font-w600">
-                        المناطق الرئيسية للملكة
-						</h2>
+					<div class="col-md-8">
+						<div class="me-auto  d-lg-block">
+								<h2 class="text-black font-w600">
+								المناطق الرئيسية للملكة
+								</h2>
+						</div>
 					</div>
-					<button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-						جديد
-					</button>
 
-						
-					<a href="javascript:void(0);" class="btn btn-primary rounded"><i class="fas fa-cog me-0"></i></a>
+					<div class="col-md-4">
+						<div class="row">
+
+							<div class="col-md-6">
+								<a class="btn btn-primary rounded" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">جديد</a>
+							</div>
+
+							<div class="col-md-6">
+							 <a href="javascript:void(0);" class="btn btn-primary rounded">
+								<i class="fas fa-cog me-0"></i>
+							 </a>
+							</div>
+
+						</div>
+					</div>
+				  </div>
 				</div>
 
 
@@ -93,32 +104,39 @@ include './../dbcontext/connect.php';
                                                 </div>
                                                 <div class="modal-body">
 												<div class="basic-form">
-                                    <form action="api/input/insert.php" method="POST">
+                                   
+									  <form method="POST" action="api/address/city.php">
+									  <input type="hidden" name="action" value="create">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <input type="text" 
                                                     class="form-control input-default"
-                                                    name="input_label"
-                                                        placeholder="أدخل أسم المدخل">
+                                                        name="name"
+                                                        placeholder="أدخل أسم المنطقة"
+														required>
                                                 </div>
                                             </div>
+
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <input type="text" class="form-control input-rounded"
-                                                    name="input_desc"
-                                                        placeholder="أدخل وصف المدخل">
+                                                    name="coords"
+                                                    placeholder=" أدخل الإحداثيات"
+													required>
                                                 </div>
                                             </div>
 
                                         </div>
-</form>
-</div>
+										</div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
+                                                    <button type="submit" class="btn btn-primary">حفظ</button>
                                                 </div>
+
+												</form>
+
                                             </div>
                                         </div>
                                     </div>
@@ -142,6 +160,7 @@ include './../dbcontext/connect.php';
 											<th><strong>DATE CREATED</strong></th>
 											<th><strong>STATUS</strong></th>
                                             <th><strong>EDIT</strong></th>
+											<th><strong>DELETE</strong></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -184,7 +203,14 @@ include './../dbcontext/connect.php';
 													</div>
 												</td>
 
-												
+												<td>
+													<div class="d-flex">
+														<a href="api/address/state.php?action=delete&id=<?= $row['state_id'] ?>" 
+														class="btn btn-danger shadow btn-xs sharp me-1">
+															<i class="fas fa-trash"></i>
+														</a>
+													</div>
+												</td>
 											</tr>
 
 											<?php

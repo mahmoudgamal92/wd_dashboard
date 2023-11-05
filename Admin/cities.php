@@ -1,6 +1,11 @@
 <?php
 include './../dbcontext/connect.php';
 ?>
+
+<?php
+$cmd = "select * from states";
+$states_res = mysqli_query($con,$cmd);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,11 +46,6 @@ include './../dbcontext/connect.php';
 	<!--********* Preloader End ***********-->
 
 	<!--********* Main wrapper start ***********-->
-	<!--********* Main wrapper start ***********-->
-	<!--********* Main wrapper start ***********-->
-	<!--********* Main wrapper start ***********-->
-	<!--********* Main wrapper start ***********-->
-	
 	<div id="main-wrapper">
 
 		<!--************* Nav header start ***************-->
@@ -67,21 +67,104 @@ include './../dbcontext/connect.php';
 
 		<div class="content-body">
 			<!-- row -->
-			<div class="container">
-				<div class="form-head page-titles d-flex  align-items-center">
-					<div class="me-auto  d-lg-block">
-						<h2 class="text-black font-w600">
-                        المدن الرئيسية
-						</h2>
+			<div class="container-fluid">
+				<div class="form-head page-titles">
+					<div class="row">
+
+						<div class="col-md-8">
+							<div class="me-auto  d-lg-block">
+								<h2 class="text-black font-w600">
+									المدن الرئيسية
+								</h2>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="row">
+
+								<div class="col-md-6">
+									<a class="btn btn-primary rounded" data-bs-toggle="modal"
+										data-bs-target="#exampleModalCenter">جديد</a>
+								</div>
+
+								<div class="col-md-6">
+									<a href="javascript:void(0);" class="btn btn-primary rounded">
+										<i class="fas fa-cog me-0"></i>
+									</a>
+								</div>
+
+							</div>
+						</div>
 					</div>
-					<a href="add_input.php" class="btn btn-primary rounded light me-3">
-					جديد
- 					</a>
-						
-					<a href="javascript:void(0);" class="btn btn-primary rounded"><i class="fas fa-cog me-0"></i></a>
 				</div>
 
 
+				<div class="modal fade" id="exampleModalCenter">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">
+									إضافة مدينة جديدة
+								</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="basic-form">
+
+									<form method="POST" action="api/address/city.php">
+										<input type="hidden" name="action" value="create">
+										<div class="row">
+
+											<div class="col-md-12">
+												<div class="mb-3">
+													<select dir="rtl" name="state_id"
+														class="default-select form-control wide mb-3">
+
+														<?php  
+													while($state = mysqli_fetch_array($states_res))
+													{
+														?>
+														<option value="<?=$state['state_id']?>">
+															<?=$state['name']?>
+														</option>
+														<?php
+													}
+													?>
+
+
+													</select>
+
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="mb-3">
+													<input type="text" class="form-control input-default" name="name"
+														placeholder="أدخل أسم المنطقة" required>
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<div class="mb-3">
+													<input type="text" class="form-control input-rounded" name="coords"
+														placeholder=" أدخل الإحداثيات" required>
+												</div>
+											</div>
+
+										</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger light"
+									data-bs-dismiss="modal">إغلاق</button>
+								<button type="submit" class="btn btn-primary">حفظ</button>
+							</div>
+
+							</form>
+
+						</div>
+					</div>
+				</div>
 
 
 
@@ -89,7 +172,7 @@ include './../dbcontext/connect.php';
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title">
-						المدن الرئيسية
+								المدن الرئيسية
 							</h4>
 						</div>
 						<div class="card-body">
@@ -98,11 +181,12 @@ include './../dbcontext/connect.php';
 									<thead>
 										<tr>
 											<th><strong>CITY NO.</strong></th>
-                                            <th><strong>CITY NAME</strong></th>
+											<th><strong>CITY NAME</strong></th>
 											<th><strong>STATE</strong></th>
 											<th><strong>DATE CREATED</strong></th>
 											<th><strong>STATUS</strong></th>
-                                            <th><strong>EDIT</strong></th>
+											<th><strong>EDIT</strong></th>
+											<th><strong>DELETE</strong></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -113,40 +197,45 @@ include './../dbcontext/connect.php';
 										while ($row = $res->fetch_assoc()) {
 
 											?>
-											<tr>
-												
-												<td><strong>
-														<?php echo $row['city_id']; ?>
-													</strong></td>
-												
-												<td>
-													<?php echo $row['name']; ?>
-												</td>
-												<td>
+										<tr>
+
+											<td>
+												<strong>
+													<?php echo $row['city_id']; ?>
+												</strong>
+											</td>
+
+											<td>
+												<?php echo $row['name']; ?>
+											</td>
+											<td>
 												<?php echo $row['state_id']; ?>
-												</td>
+											</td>
 
-                                                <td>
+											<td>
 												<?php echo $row['date_created']; ?>
-												</td>
-												<td>
-													<div class="d-flex align-items-center"><i
-															class="fas fa-circle text-success me-1"></i> Active</div>
-												</td>
-												<td>
-													<div class="d-flex">
-														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1">
-															<i class="fas fa-pencil-alt"></i>
-														</a>
-
-													
-													</div>
-												</td>
-
-												
-											</tr>
-
-											<?php
+											</td>
+											<td>
+												<div class="d-flex align-items-center"><i
+														class="fas fa-circle text-success me-1"></i> Active</div>
+											</td>
+											<td>
+												<div class="d-flex">
+													<a href="#" class="btn btn-primary shadow btn-xs sharp me-1">
+														<i class="fas fa-pencil-alt"></i>
+													</a>
+												</div>
+											</td>
+											<td>
+												<div class="d-flex">
+												<a href="api/address/city.php?action=delete&id=<?= $row['city_id'] ?>" 
+													class="btn btn-danger shadow btn-xs sharp me-1">
+														<i class="fas fa-trash"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<?php
 										}
 										?>
 									</tbody>

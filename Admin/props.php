@@ -85,7 +85,7 @@ include './../dbcontext/connect.php';
 
 				<div class="row">
 				
-					<div class="col-xl-6 col-xxl-12">
+					<div class="col-xl-12 col-xxl-12">
 						<div class="card house-bx">
 							<div class="card-body">
 								<div class="media align-items-center">
@@ -104,7 +104,7 @@ include './../dbcontext/connect.php';
 						</div>
 					</div>
 
-					<div class="col-xl-3 col-xxl-6 col-md-6">
+					<div class="col-xl-6 col-xxl-6 col-md-6">
 						<div class="card">
 							<div class="card-body">
 								<div class="media align-items-center">
@@ -121,7 +121,7 @@ include './../dbcontext/connect.php';
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-3 col-xxl-6 col-md-6">
+					<div class="col-xl-6 col-xxl-6 col-md-6">
 						<div class="card">
 							<div class="card-body">
 								<div class="media align-items-center">

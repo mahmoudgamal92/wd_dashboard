@@ -112,7 +112,7 @@ $count_rent = mysqli_num_rows($result_rent);
 				</div>
 
 				<div class="row">
-					<div class="col-xl-6 col-xxl-12">
+					<div class="col-xl-12 col-xxl-12">
 						<div class="row">
 
 							<div class="col-sm-12 col-md-6">
@@ -265,7 +265,7 @@ $count_rent = mysqli_num_rows($result_rent);
 
 
 					</div>
-					<div class="col-xl-6 col-xxl-12">
+					<div class="col-xl-12">
 						<div class="card">
 							<div class="card-header border-0 pb-0">
 								<h3 class="fs-20 text-black">
@@ -323,9 +323,9 @@ $count_rent = mysqli_num_rows($result_rent);
 					</div>
 
 
-					<div class="col-xl-12 col-xxl-12">
+					<div class="col-xl-12">
 						<div class="row">
-							<div class="col-xl-8 col-xxl-12">
+							<div class="col-xl-12 col-xxl-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
 										<h3 class="fs-20 text-black">

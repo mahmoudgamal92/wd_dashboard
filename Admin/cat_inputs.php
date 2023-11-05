@@ -5,12 +5,6 @@ $cmd = "select * from cats where type_id = '$cat_id'";
 $result = mysqli_query($con, $cmd);
 $cat = mysqli_fetch_array($result);
 
-// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id 
-// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id 
-// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id 
-// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id 
-// Get All Inputs Where Cat Id , and just Check in Each row if the cat is exist with same input id
- 
 $cmd1 = "select * from cat_inputs where cat_id = '$cat_id'";
 $result1 = mysqli_query($con, $cmd1);
 
@@ -101,10 +95,6 @@ while( $row = mysqli_fetch_array($result1))
                                 class="fas fa-cog me-0"></i></a>
                     </div>
 
-
-
-
-
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
@@ -129,8 +119,6 @@ while( $row = mysqli_fetch_array($result1))
                                                 <th><strong>PLACEHOLDER</strong></th>
                                                 <th><strong>TYPE</strong></th>
                                                 <th><strong>ROLE</strong></th>
-                                                <th><strong>DESC</strong></th>
-                                                <th><strong>LABEL</strong></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -152,23 +140,19 @@ while( $row = mysqli_fetch_array($result1))
                                                                 if(in_array($row['input_id'],$inputs)) {
                                                                     echo "checked";
                                                                 }
-                                                                else
-                                                                {
-
-                                                                }
                                                                 ?>
                                                                 >
-                                                            <label class="custom-control-label"
-                                                                for="customCheckBox2"></label>
                                                         </div>
                                                     </td>
-                                                    <td><strong>
+                                                    <td>
+                                                        <strong>
                                                             <?php echo $row['input_id']; ?>
-                                                        </strong></td>
+                                                        </strong>
+                                                    </td>
                                                     <td>
                                                         <div class="d-flex align-items-center">
                                                             <span class="w-space-no">
-                                                                <?php echo $row['input_title']; ?>
+                                                                <?php echo $row['input_desc']; ?>
                                                             </span>
                                                         </div>
                                                     </td>
@@ -182,23 +166,7 @@ while( $row = mysqli_fetch_array($result1))
                                                         <div class="d-flex align-items-center"><i
                                                                 class="fas fa-circle text-success me-1"></i> Active</div>
                                                     </td>
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <a href="#" class="btn btn-primary shadow btn-xs sharp me-1">
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-
-
-                                                        </div>
-                                                    </td>
-
-                                                    <td>
-                                                        <a href="api/input/delete.php?id=<?php
-                                                        echo $row['input_id']; ?>"
-                                                            class="btn btn-danger shadow btn-xs sharp">
-                                                            <i class="fas fa-trash"></i>
-                                                        </a>
-                                                    </td>
+                                                  
                                                 </tr>
 
                                                 <?php

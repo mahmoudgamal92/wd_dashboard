@@ -84,7 +84,7 @@ include './../dbcontext/connect.php';
 
 
 				<div class="row">
-					<div class="col-xl-6 col-xxl-12">
+					<div class="col-xl-12">
 						<div class="card house-bx">
 							<div class="card-body">
 								<div class="media align-items-center">
