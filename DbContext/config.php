@@ -1,7 +1,6 @@
 <?php
 $filePath = ".env";
 function loadEnv($filePath) {
-    // Check if the .env file exists
     if (file_exists($filePath)) {
         // Load the .env file into an array
         $envFile = file_get_contents($filePath);

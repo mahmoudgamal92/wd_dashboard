@@ -155,7 +155,7 @@ include './../dbcontext/connect.php';
                                                 ?>
                                                 
 												<img class="me-sm-4 me-3 img-fluid rounded" 
-												width="60" src="images/man.png" alt="user image">
+												width="60" src="images/house.png" alt="user image">
                                               <?php
                                                 }
                                               else
