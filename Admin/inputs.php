@@ -214,7 +214,7 @@ include './../dbcontext/connect.php';
 											<td>
 												<div class="d-flex align-items-center">
 													<span class="w-space-no">
-														<?php echo $row['input_label']; ?>
+														<?php echo $row['input_desc']; ?>
 													</span>
 												</div>
 											</td>
