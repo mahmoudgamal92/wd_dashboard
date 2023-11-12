@@ -1,5 +1,5 @@
 <?php
-include_once './../../DbContext/connect.php';
+include_once './../../dbcontext/connect.php';
     $id = $_GET['prop_id'];
     $cmd = "delete from properties where prop_id = '$id'";
     if (mysqli_query($con,$cmd))

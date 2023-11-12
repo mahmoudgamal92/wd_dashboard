@@ -6,9 +6,8 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-include_once './../../DbContext/connect.php';
-$state_id = $_GET['state_id'];
-$cmd = "select * from cities where state_id = '$state_id'";
+include_once './../../dbcontext/connect.php';
+$cmd = "select * from states";
 $res = mysqli_query($con, $cmd);
 if(mysqli_num_rows($res) > 0)
 {
