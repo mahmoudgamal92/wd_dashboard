@@ -1,134 +1,86 @@
-<div class="header navbar">
-    <div class="header-container">
-        <ul class="nav-left">
-            <li><a id="sidebar-toggle" class="sidebar-toggle" href="javascript:void(0);"><i class="ti-menu"></i></a>
-            </li>
-            <li class="search-box"><a class="search-toggle no-pdd-right" href="javascript:void(0);"><i
-                        class="search-icon ti-search pdd-right-10"></i> <i
-                        class="search-icon-close ti-close pdd-right-10"></i></a></li>
-            <li class="search-input"><input class="form-control" type="text" placeholder="Search..."></li>
-        </ul>
-        <ul class="nav-right">
-            <li class="notifications dropdown"><span class="counter bgc-red">3</span> <a href="#"
-                    class="dropdown-toggle no-after" data-toggle="dropdown"><i class="ti-bell"></i></a>
-                <ul class="dropdown-menu">
-                    <li class="pX-20 pY-15 bdB"><i class="ti-bell pR-10"></i> <span
-                            class="fsz-sm fw-600 c-grey-900">Notifications</span></li>
-                    <li>
-                        <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
-                            <li><a href="#" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
-                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
-                                            src="../../../randomuser.me/api/portraits/men/1.jpg" alt=""></div>
-                                    <div class="peer peer-greed"><span><span class="fw-500">John Doe</span> <span
-                                                class="c-grey-600">liked your <span
-                                                    class="text-dark">post</span></span></span>
-                                        <p class="m-0"><small class="fsz-xs">5 mins ago</small></p>
-                                    </div>
-                                </a></li>
-                            <li><a href="#" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
-                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
-                                            src="../../../randomuser.me/api/portraits/men/2.jpg" alt=""></div>
-                                    <div class="peer peer-greed"><span><span class="fw-500">Moo Doe</span> <span
-                                                class="c-grey-600">liked your <span class="text-dark">cover
-                                                    image</span></span></span>
-                                        <p class="m-0"><small class="fsz-xs">7 mins ago</small></p>
-                                    </div>
-                                </a></li>
-                            <li><a href="#" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
-                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
-                                            src="../../../randomuser.me/api/portraits/men/3.jpg" alt=""></div>
-                                    <div class="peer peer-greed"><span><span class="fw-500">Lee Doe</span> <span
-                                                class="c-grey-600">commented on your <span
-                                                    class="text-dark">video</span></span></span>
-                                        <p class="m-0"><small class="fsz-xs">10 mins ago</small></p>
-                                    </div>
-                                </a></li>
+<div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+
+					
+					<div class="header-left">
+                            <div class="dashboard_bar">
+                                <div class="search_bar dropdown">
+									<div class="dropdown-menu p-0 m-0">
+										<form>
+											<div class="input-group">
+												<input class="form-control" type="search" placeholder="أبحث هنا" aria-label="Search">
+												<span class="search_icon p-3 c-pointer" data-bs-toggle="dropdown">
+													<svg class="ms-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M23.7871 22.7761L17.9548 16.9437C19.5193 15.145 20.4665 12.7982 20.4665 10.2333C20.4665 4.58714 15.8741 0 10.2333 0C4.58714 0 0 4.59246 0 10.2333C0 15.8741 4.59246 20.4665 10.2333 20.4665C12.7982 20.4665 15.145 19.5193 16.9437 17.9548L22.7761 23.7871C22.9144 23.9255 23.1007 24 23.2816 24C23.4625 24 23.6488 23.9308 23.7871 23.7871C24.0639 23.5104 24.0639 23.0528 23.7871 22.7761ZM1.43149 10.2333C1.43149 5.38004 5.38004 1.43681 10.2279 1.43681C15.0812 1.43681 19.0244 5.38537 19.0244 10.2333C19.0244 15.0812 15.0812 19.035 10.2279 19.035C5.38004 19.035 1.43149 15.0865 1.43149 10.2333Z" fill="#3B4CB8"/>
+													</svg>
+												</span>
+											</div>	
+										</form>
+									</div>
+								</div>
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav header-right">
+
+							<li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link  ai-icon" href="#" role="button" data-bs-toggle="dropdown">
+								<i class="fas fa-bell"></i>
+                                </a>
+                            </li>
+
+
+							<li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link bell bell-link" href="#">
+								<i class="fas fa-bell"></i>
+									<div class="pulse-css"></div>
+                                </a>
+							</li>
+
+
+							<li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link" href="#" data-bs-toggle="dropdown">
+								<i class="fas fa-bell"></i>
+									<div class="pulse-css"></div>
+                                </a>
+							</li>
+
+
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+									<div class="header-info">
+										<span class="text-black">Mahmoud Gamal.</span>
+										<p class="fs-12 mb-0">Admin</p>
+									</div>
+                                    <img src="images/man.png" width="20" alt=""/>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+
+
+                                    <a href="app-profile.html" class="dropdown-item ai-icon">
+                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        <span class="ms-2">الحساب الشخصي</span>
+                                    </a>
+
+                                    <a href="email-inbox.html" class="dropdown-item ai-icon">
+                                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        <span class="ms-2">البريد الوارد</span>
+                                    </a>
+
+                                    <a href="page-login.html" class="dropdown-item ai-icon">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span class="ms-2">تسجيل الخروج</span>
+                                    </a>
+
+
+                                </div>
+                            </li>
+
+
                         </ul>
-                    </li>
-                    <li class="pX-20 pY-15 ta-c bdT"><span><a href="#" class="c-grey-600 cH-blue fsz-sm td-n">View All
-                                Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a></span></li>
-                </ul>
-            </li>
-            <li class="notifications dropdown"><span class="counter bgc-blue">3</span> <a href="#"
-                    class="dropdown-toggle no-after" data-toggle="dropdown"><i class="ti-email"></i></a>
-                <ul class="dropdown-menu">
-                    <li class="pX-20 pY-15 bdB"><i class="ti-email pR-10"></i> <span
-                            class="fsz-sm fw-600 c-grey-900">Emails</span></li>
-                    <li>
-                        <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
-                            <li><a href="#" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
-                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
-                                            src="../../../randomuser.me/api/portraits/men/1.jpg" alt=""></div>
-                                    <div class="peer peer-greed">
-                                        <div>
-                                            <div class="peers jc-sb fxw-nw mB-5">
-                                                <div class="peer">
-                                                    <p class="fw-500 mB-0">John Doe</p>
-                                                </div>
-                                                <div class="peer"><small class="fsz-xs">5 mins ago</small></div>
-                                            </div><span class="c-grey-600 fsz-sm">Want to create your own customized
-                                                data generator for
-                                                your app...</span>
-                                        </div>
-                                    </div>
-                                </a></li>
-                            <li><a href="#" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
-                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
-                                            src="../../../randomuser.me/api/portraits/men/2.jpg" alt=""></div>
-                                    <div class="peer peer-greed">
-                                        <div>
-                                            <div class="peers jc-sb fxw-nw mB-5">
-                                                <div class="peer">
-                                                    <p class="fw-500 mB-0">Moo Doe</p>
-                                                </div>
-                                                <div class="peer"><small class="fsz-xs">15 mins ago</small></div>
-                                            </div><span class="c-grey-600 fsz-sm">Want to create your own customized
-                                                data generator for
-                                                your app...</span>
-                                        </div>
-                                    </div>
-                                </a></li>
-                            <li><a href="#" class="peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100">
-                                    <div class="peer mR-15"><img class="w-3r bdrs-50p"
-                                            src="../../../randomuser.me/api/portraits/men/3.jpg" alt=""></div>
-                                    <div class="peer peer-greed">
-                                        <div>
-                                            <div class="peers jc-sb fxw-nw mB-5">
-                                                <div class="peer">
-                                                    <p class="fw-500 mB-0">Lee Doe</p>
-                                                </div>
-                                                <div class="peer"><small class="fsz-xs">25 mins ago</small></div>
-                                            </div><span class="c-grey-600 fsz-sm">Want to create your own customized
-                                                data generator for
-                                                your app...</span>
-                                        </div>
-                                    </div>
-                                </a></li>
-                        </ul>
-                    </li>
-                    <li class="pX-20 pY-15 ta-c bdT"><span><a href="#" class="c-grey-600 cH-blue fsz-sm td-n">View All
-                                Email
-                                <i class="fs-xs ti-angle-right mL-10"></i></a></span></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1"
-                    data-toggle="dropdown">
-                    <div class="peer mR-10"><img class="w-2r bdrs-50p"
-                            src="../../../randomuser.me/api/portraits/men/10.jpg" alt=""></div>
-                    <div class="peer"><span class="fsz-sm c-grey-900">Welcome , <?php  echo $_SESSION['admin_name']?></span></div>
-                </a>
-                <ul class="dropdown-menu fsz-sm">
-                    <li><a href="#" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-settings mR-10"></i>
-                            <span>Setting</span></a></li>
-                    <li><a href="#" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-user mR-10"></i>
-                            <span>Profile</span></a></li>
-                    <li><a href="#" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-email mR-10"></i>
-                            <span>Messages</span></a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="logout.php" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-power-off mR-10"></i>
-                            <span>Logout</span></a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
+                    </div>
+                </nav>
+            </div>
+        </div>

@@ -1,130 +1,106 @@
-<div class="sidebar">
-  <div class="sidebar-inner">
-    <div class="sidebar-logo">
-      <div class="peers ai-c fxw-nw">
-        <div class="peer peer-greed"><a class="sidebar-link td-n" href="index.php" class="td-n">
-            <div class="peers ai-c fxw-nw">
-              <div class="peer">
-                <div class="logo">
-                  <img src="assets/logo.png"
-                    style="width:200px;height:80px;border-radius:10px;margin-top:10px;margin-bottom:10px" alt="">
-                </div>
-              </div>
-            </div>
-          </a></div>
-        <div class="peer">
-          <div class="mobile-toggle sidebar-toggle">
-            <a href="#" class="td-n">
-              <i class="ti-arrow-circle-left"></i></a>
-          </div>
+<div class="deznav">
+            <div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-dashboard-1"></i>
+							<span class="nav-text">
+                                العملاء
+                            </span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="customers.php">المستخدمين</a></li>
+							
+						</ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-app"></i>
+							<span class="nav-text">العقارات</span>
+						</a>
+                        <ul aria-expanded="false">
+
+                            <li><a href="props.php">عرض العقارات </a></li>
+                            <li><a href="cats.php">فئات العقارات</a></li>
+                            <li><a href="inputs.php">المدخلات</a></li>
+
+							<li><a href="post-details.html">إضافة عقار</a></li>
+                        </ul>
+                    </li>
+
+
+                    
+                    
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-settings"></i>
+							<span class="nav-text">الإعدادت</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="states.php">المناطق</a></li>
+                            <li><a href="cities.php">المدن</a></li>
+                            <li><a href="districts.php">الأحياء</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    
+                    <li>
+                        <a class="has-arrow ai-icon" href="packages.php" aria-expanded="false">
+							<i class="flaticon-bar-chart-2"></i>
+							<span class="nav-text">باقات الإشتراك</span>
+						</a>
+                    </li>
+                
+
+
+
+
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-form-1"></i>
+							<span class="nav-text">الفواتير</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="form-element.html">Form Elements</a></li>
+                            <li><a href="form-wizard.html">Wizard</a></li>
+                            <li><a href="form-ckeditor.html">CkEditor</a></li>
+                            <li><a href="form-pickers.html">Pickers</a></li>
+                            <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
+                        </ul>
+                    </li>
+
+                    
+                    <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-table"></i>
+							<span class="nav-text">Table</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
+                            <li><a href="table-datatable-basic.html">Datatable</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-landing-page"></i>
+							<span class="nav-text">Pages</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="page-register.html">Register</a></li>
+                            <li><a href="page-login.html">Login</a></li>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="page-error-400.html">Error 400</a></li>
+                                    <li><a href="page-error-403.html">Error 403</a></li>
+                                    <li><a href="page-error-404.html">Error 404</a></li>
+                                    <li><a href="page-error-500.html">Error 500</a></li>
+                                    <li><a href="page-error-503.html">Error 503</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="page-lock-screen.html">Lock Screen</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+				
+				<div class="copyright">
+					<p><strong>Aqargate Dashboard</strong> © 2022 All Rights Reserved</p>
+				</div>
+			</div>
         </div>
-      </div>
-    </div>
-    <ul class="sidebar-menu scrollable pos-r">
-
-      <li class="nav-item mT-30 active">
-        <a class="sidebar-link" href="index.php" default>
-          <span class="icon-holder"><i class="c-blue-500 ti-home"></i> </span>
-          <span class="title">لوحة التحكم</span></a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="categories.php">
-          <span class="icon-holder">
-            <i class="c-orange-500 ti-menu-alt"></i>
-          </span>
-          <span class="title">الفئات</span>
-          <span class="arrow">
-            <i class="ti-angle-right"></i>
-          </span>
-        </a>
-      </li>
-
-
-      <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="#">
-          <span class="icon-holder">
-            <i class="c-green-500 ti-shopping-cart"></i>
-          </span>
-          <span class="title">العقارات</span>
-          <span class="arrow">
-            <i class="ti-angle-right"></i>
-          </span>
-        </a>
-
-        <ul class="dropdown-menu">
-          <li><a class="sidebar-link" href="props.php">الكل</a></li>
-        </ul>
-      </li>
-      
-      
-            <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="#">
-          <span class="icon-holder">
-            <i class="c-green-500 ti-shopping-cart"></i>
-          </span>
-          <span class="title">المناطق و المدن </span>
-          <span class="arrow">
-            <i class="ti-angle-right"></i>
-          </span>
-        </a>
-
-        <ul class="dropdown-menu">
-          <li><a class="sidebar-link" href="states.php">الكل</a></li>
-        </ul>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="users.php">
-          <span class="icon-holder">
-            <i class="c-blue-500 ti-clipboard"></i>
-          </span>
-          <span class="title">المستخدمين</span>
-          <span class="arrow">
-            <i class="ti-angle-right"></i>
-          </span>
-        </a>
-      </li>
-
-
-      <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="settings.php">
-          <span class="icon-holder">
-            <i class="c-red-500 ti-view-list-alt"></i>
-          </span>
-          <span class="title">الإعدادت</span>
-          <span class="arrow">
-            <i class="ti-angle-right"></i>
-          </span>
-        </a>
-
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="javascript:void(0);">
-          <span class="icon-holder">
-            <i class="c-blue-500 ti-headphone-alt"></i>
-          </span>
-          <span class="title">النسخ الإحتياطي</span>
-          <span class="arrow">
-            <i class="ti-angle-right"></i>
-          </span>
-        </a>
-
-      </li>
-
-
-      <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="countries.php">
-          <span class="icon-holder">
-            <i class="c-green-500 ti-shopping-cart"></i>
-          </span>
-          <span class="title"> العناوين</span>
-          <span class="arrow">
-            <i class="ti-angle-right"></i>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
