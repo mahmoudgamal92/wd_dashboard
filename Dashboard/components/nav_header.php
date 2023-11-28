@@ -1,6 +1,6 @@
 <div class="nav-header">
 			<a href="index.php" class="brand-logo">
-				<img class="logo-abbr" src="images/logo_white.png" style="width:80px;height:80px">
+				<img class="logo-abbr" src="images/logo.png" style="width:80px;height:80px">
 			</a>
 
 			<div class="nav-control">

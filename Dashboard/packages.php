@@ -54,7 +54,7 @@ $res = mysqli_query($con,$cmd);
 
         <div class="nav-header">
             <a href="index.php" class="brand-logo">
-                <img class="logo-abbr" src="images/logo_white.png" alt="">
+                <img class="logo-abbr" src="images/logo.png" alt="">
 
             </a>
 

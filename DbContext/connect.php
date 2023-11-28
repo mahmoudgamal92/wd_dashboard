@@ -3,8 +3,7 @@
 $dbHost = "localhost";
 $dbUser = "root";
 $dbPass = "";
-$dbName = "aqartech";
-
+$dbName = "wdapp";
 // $dbHost = "162.241.218.91";
 // $dbUser = "zawyaonl_mahmoud";
 // $dbPass = "8+ja(_nF)$]O";

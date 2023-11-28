@@ -1,8 +1,5 @@
 <?php
 include './../../../dbcontext/connect.php';
-?>
-
-<?php
 if(isset($_POST['action']) || $_GET['action'])
 {
     $input_id = $_GET['id'];
@@ -20,7 +17,6 @@ if(isset($_POST['action']) || $_GET['action'])
             }
         }
     }
-
     else if($_POST['action'])
     {
         $action = $_POST['action'];
@@ -39,9 +35,7 @@ if(isset($_POST['action']) || $_GET['action'])
         }
         else if($action == "update") 
         {
-            
         }
     }
 } 
-
 ?>
